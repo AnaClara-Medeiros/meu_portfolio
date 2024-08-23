@@ -2,9 +2,9 @@ import streamlit as st
 from streamlit_extras.stylable_container import stylable_container 
 from streamlit_extras.bottom_container import bottom
 import sys
-sys.path.append('../modulos')
+sys.path.append('./modulos')
 from get_url_from_png import get_base64_of_png_file
-from pag_produtos import pag_produtos
+
 
 def pag_inicio():
     bin_str = get_base64_of_png_file(r'D:\anacl\AnaClara-arqv\Portfolio\app\outros\home.png') #transformar um arqv local em html
@@ -26,36 +26,4 @@ def pag_inicio():
     </style>"""% bin_str
 
     st.markdown(estilo_pagina, unsafe_allow_html=True)
-
-    col1, col2, col3, col4, col5 = st.columns([1,1,1,1,1])
-
-    with col5:
-      with stylable_container(
-          key="button_produtos",
-          css_styles="""
-              button {
-                  background-color: #c4459f;
-                  color: white;
-                  border-radius: 20px;
-                  border-color: #c4459f;
-              }
-              """,):
-
-          if st.button('PROJETOS AQUI!'):
-             st.session_state.page = "produtos"
-             #st.experimental_rerun()
     
-if 'page' not in st.session_state:
-    st.session_state.page = "inicio"
-
-# Renderiza a página com base no estado atual
-if st.session_state.page == "produtos":
-    pag_produtos()
-elif st.session_state.page == "inicio":
-    pag_inicio()
-    
-    
-
-   
-    
-
