@@ -40,13 +40,10 @@ def pag_produtos():
                   color: white;
                   border-radius: 20px;
                   border-color: #c4459f;
-                  position: fixed; /* Fixa o botão na tela */
-                  bottom: 20px; /* Distância do canto inferior */
-                  right: 230px;
               }
               """,):
 
-          if st.button('Abrir'):
+          if st.button('Dashboards'):
              st.session_state.pagina = "dashboards"
     
 if 'pagina' not in st.session_state:
