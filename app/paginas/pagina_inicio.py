@@ -1,6 +1,4 @@
 import streamlit as st
-from streamlit_extras.stylable_container import stylable_container 
-from streamlit_extras.bottom_container import bottom
 import sys
 sys.path.append('./modulos')
 from get_url_from_png import get_base64_of_png_file

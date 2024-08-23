@@ -1,7 +1,7 @@
 import streamlit as st
 from streamlit_extras.stylable_container import stylable_container
 import sys
-sys.path.append('../app//paginas')
+sys.path.append('../app/paginas')
 from pagina_inicio import pag_inicio
 from pagina_produtos import pag_produtos
 

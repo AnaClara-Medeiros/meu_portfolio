@@ -1,11 +1,12 @@
 import streamlit as st
 from streamlit_extras.stylable_container import stylable_container 
-import sys
-sys.path.append('./app/modulos')
-from get_url_from_png import get_base64_of_png_file
 from dashboards import pag_dashboards
 from automacoes import pag_automacoes
 from github import pag_github
+import sys
+sys.path.append('./app/modulos')
+from get_url_from_png import get_base64_of_png_file
+
 
 def pag_produtos():
     bin_str = get_base64_of_png_file(r'D:\anacl\AnaClara-arqv\Portfolio\app\outros\produtos.png') #transformar um arqv local em html
