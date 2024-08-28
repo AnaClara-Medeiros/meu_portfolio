@@ -3,9 +3,9 @@ from streamlit_option_menu import option_menu
 st.set_page_config(layout="wide", initial_sidebar_state = 'collapsed', page_title="Ana Medeiros", page_icon=":arrow_down:")
 from paginas.pagina_inicio import pag_inicio
 from paginas.pagina_produtos import pag_produtos
-import style_config
+from modulos.style_config import estilo
 
-st.markdown(style_config.estilo, unsafe_allow_html=True) 
+st.markdown(estilo, unsafe_allow_html=True) 
 
 with st.sidebar:
     selected = option_menu(None, ["Home", 'Produtos'], 
