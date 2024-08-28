@@ -1,0 +1,14 @@
+[server]
+enableXsrfProtection = false
+
+[theme]
+
+primaryColor = "#C4459F"
+
+backgroundColor = "#4F124D"
+
+secondaryBackgroundColor = "4F124D"
+
+textColor = "#C4459F"
+
+font = "sans serif"

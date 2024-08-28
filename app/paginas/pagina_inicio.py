@@ -25,3 +25,6 @@ def pag_inicio():
 
     st.markdown(estilo_pagina, unsafe_allow_html=True)
     
+    
+if __name__ == '__main__':
+    pag_inicio()
