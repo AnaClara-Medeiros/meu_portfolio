@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 st.set_page_config(layout="wide", initial_sidebar_state = 'collapsed', page_title="Ana Medeiros", page_icon=":arrow_down:")
 import sys
-sys.path.append('../app/paginas')
+sys.path.append('app/paginas')
 from pagina_inicio import pag_inicio
 from pagina_produtos import pag_produtos
 import style_config
