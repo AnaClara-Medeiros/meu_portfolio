@@ -54,7 +54,7 @@ def pag_produtos():
         # Centraliza o botão na coluna
         if st.button("Dashboards/ Analytics"):
             st.session_state.pag = 'dashboards'
-
+    
     with col2:
         st.markdown("<br>" * 12, unsafe_allow_html=True)
         # Centraliza o botão na coluna
@@ -67,15 +67,17 @@ def pag_produtos():
         if st.button('Machine Learning'):
             st.session_state.pag = 'machine'
 
-if "pag" not in st.session_state:
-    st.session_state.pag = 'produtos'
+    if "pag" not in st.session_state:
+        st.session_state.pag = 'produtos'
 
-if st.session_state.pag == "dashboards":
-    pag_dashboards()
-if st.session_state.pag == "automacoes":
-    pag_automacoes()
-if st.session_state.pag == "machine":
-    pag_github()
+    if st.session_state.pag == "dashboards":
+        pag_dashboards()
+    elif st.session_state.pag == "automacoes":
+        pag_automacoes()
+    elif st.session_state.pag == "machine":
+        pag_github()
+
+
 
        
     
