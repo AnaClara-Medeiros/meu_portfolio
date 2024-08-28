@@ -1,7 +1,7 @@
 import streamlit as st
-from dashboards import pag_dashboards
-from automacoes import pag_automacoes
-from github import pag_github
+from paginas.dashboards import pag_dashboards
+from paginas.automacoes import pag_automacoes
+from paginas.github import pag_github
 from modulos.get_url_from_png import get_base64_of_png_file
 
 
