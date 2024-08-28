@@ -1,7 +1,5 @@
 import streamlit as st
-import sys
-sys.path.append('./modulos')
-from get_url_from_png import get_base64_of_png_file
+from modulos.get_url_from_png import get_base64_of_png_file
 
 
 def pag_inicio():

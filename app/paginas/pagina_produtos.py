@@ -2,9 +2,7 @@ import streamlit as st
 from dashboards import pag_dashboards
 from automacoes import pag_automacoes
 from github import pag_github
-import sys
-sys.path.append('./app/modulos')
-from get_url_from_png import get_base64_of_png_file
+from modulos.get_url_from_png import get_base64_of_png_file
 
 
 def pag_produtos():
