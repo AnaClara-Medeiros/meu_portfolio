@@ -64,6 +64,7 @@ def pag_produtos():
         if st.button('Machine Learning'):
             st.session_state.pag = 'machine'
 
+def main_pag_produtos():
     if "pag" not in st.session_state:
         st.session_state.pag = 'produtos'
 
@@ -73,6 +74,9 @@ def pag_produtos():
         pag_automacoes()
     elif st.session_state.pag == "machine":
         pag_github()
+    else:
+        pag_produtos()
+
 
 
 
