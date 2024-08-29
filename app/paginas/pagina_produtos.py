@@ -6,7 +6,7 @@ from modulos.get_url_from_png import get_base64_of_png_file
 
 
 def pag_produtos():
-    bin_str = get_base64_of_png_file(r'app/outros/produtos.png') #transformar um arqv local em html
+    bin_str = get_base64_of_png_file(r'outros/produtos.png') #transformar um arqv local em html
 
     estilo_pagina = """
     <style>
@@ -64,6 +64,7 @@ def pag_produtos():
         if st.button('Machine Learning'):
             st.session_state.pag = 'machine'
 
+def main_pag_produtos():
     if "pag" not in st.session_state:
         st.session_state.pag = 'produtos'
 
@@ -73,6 +74,9 @@ def pag_produtos():
         pag_automacoes()
     elif st.session_state.pag == "machine":
         pag_github()
+    else:
+        pag_produtos()
+
 
 
 
