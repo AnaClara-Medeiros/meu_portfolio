@@ -27,23 +27,6 @@ def pag_produtos():
 
     st.markdown(estilo_pagina, unsafe_allow_html=True)
 
-    st.markdown("""
-    <style>
-        .custom-button {
-            background-color: #4F124D;
-            text-color: white;
-            text-align: center;
-            border-radius: 30px;
-            border: 2px solid #c4459f;
-            width: 200px;
-            padding: 10px;
-            font-size: 16px;
-            display: inline-block; /* Faz com que o botão se comporte como um bloco inline */
-            margin: 0 auto; /* Centraliza o botão horizontalmente */
-            box-sizing: border-box; /* Inclui o padding e a borda na largura total */
-            text-decoration: none; /* Remove o sublinhado padrão dos links */
-        }
-    </style>""", unsafe_allow_html=True)
 
     col1, col2, col3 = st.columns([0.33,0.33,0.33])
     with col1:
