@@ -36,13 +36,13 @@ def pag_produtos():
             st.session_state.pag = 'dashboards'
     
     with col2:
-        st.markdown("<br>" * 9, unsafe_allow_html=True)
+        st.markdown("<br>" * 11, unsafe_allow_html=True)
         # Centraliza o botão na coluna
         if st.button('Automações'):
             st.session_state.pag = 'automacoes'
 
     with col3:
-        st.markdown("<br>" * 9, unsafe_allow_html=True)
+        st.markdown("<br>" * 11, unsafe_allow_html=True)
         # Centraliza o botão na coluna
         if st.button('Machine Learning'):
             st.session_state.pag = 'machine'
