@@ -15,6 +15,7 @@ if selected == 'Home':
     pag_inicio()
             
 if selected == 'Produtos':
+    st.session_state.pag = 'produtos'
     main_pag_produtos()
             
 
