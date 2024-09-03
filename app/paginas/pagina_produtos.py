@@ -6,7 +6,7 @@ from modulos.get_url_from_png import get_base64_of_png_file
 
 
 def pag_produtos():
-    bin_str = get_base64_of_png_file(r'app/outros/produtos.png') #transformar um arqv local em html
+    bin_str = get_base64_of_png_file(r'outros/produtos.png') #transformar um arqv local em html
 
     estilo_pagina = """
     <style>
@@ -30,19 +30,19 @@ def pag_produtos():
 
     col1, col2, col3 = st.columns([0.33,0.33,0.33])
     with col1:
-        st.markdown("<br>" * 12, unsafe_allow_html=True)
+        st.markdown("<br>" * 10, unsafe_allow_html=True)
         # Centraliza o botão na coluna
         if st.button("Dashboards/ Analytics"):
             st.session_state.pag = 'dashboards'
     
     with col2:
-        st.markdown("<br>" * 12, unsafe_allow_html=True)
+        st.markdown("<br>" * 10, unsafe_allow_html=True)
         # Centraliza o botão na coluna
         if st.button('Automações'):
             st.session_state.pag = 'automacoes'
 
     with col3:
-        st.markdown("<br>" * 12, unsafe_allow_html=True)
+        st.markdown("<br>" * 10, unsafe_allow_html=True)
         # Centraliza o botão na coluna
         if st.button('Machine Learning'):
             st.session_state.pag = 'machine'
