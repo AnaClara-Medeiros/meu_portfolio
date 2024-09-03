@@ -30,7 +30,7 @@ def pag_produtos():
 
     col1, col2, col3 = st.columns([0.33,0.33,0.33])
     with col1:
-        st.markdown("<br>" * 10, unsafe_allow_html=True)
+        st.markdown("<br>" * 11, unsafe_allow_html=True)
         # Centraliza o botão na coluna
         if st.button("Dashboards/ Analytics"):
             st.session_state.pag = 'dashboards'
