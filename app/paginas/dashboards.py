@@ -8,10 +8,10 @@ def pag_dashboards():
         st.session_state.pag = 'produtos'
 
 
-    vendas_png = r'outros/dash_vendas.png'
-    financeiro_png = r'outros/dash_financeiro.png'
+    vendas_png = r'app/outros/dash_vendas.png'
+    financeiro_png = r'app/outros/dash_financeiro.png'
     #financas_png = r'outros/dash_financas.png')
-    logistica_png = r'outros/dash_logistica.png'
+    logistica_png = r'app/outros/dash_logistica.png'
 
     dashboards = [
         {
