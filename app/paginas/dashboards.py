@@ -3,6 +3,11 @@ from modulos.get_url_from_png import get_base64_of_png_file
 # Dados dos dashboards do Power BI com suas pré-visualizações
 
 def pag_dashboards():
+    #voltar para pagina produtos
+    if st.button("Voltar para Produtos"):
+        st.session_state.pag = 'produtos'
+
+
     vendas_png = r'app/outros/dash_vendas.png'
     financeiro_png = r'app/outros/dash_financeiro.png'
     #financas_png = r'outros/dash_financas.png')
