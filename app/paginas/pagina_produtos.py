@@ -1,6 +1,5 @@
 import streamlit as st
 from paginas.dashboards import pag_dashboards
-from app.paginas.apresentacoes import pag_automacoes
 from paginas.github import pag_github
 from modulos.get_url_from_png import get_base64_of_png_file
 
