@@ -23,6 +23,10 @@ if selected == 'Home':
 if selected == 'DataViz/Dashboards':
     st.session_state.pag = 'dashboards'
     pag_dashboards()
+
+if selected == 'IA/Automações':
+    st.session_state.pag = 'github'
+    pag_github()
             
 
 

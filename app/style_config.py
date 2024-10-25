@@ -1,6 +1,8 @@
 estilo = '''
     <style>
 
+    backgroundColor = "#4F124D"
+    
     .title-text {{
         color: #C4459F;
     }}
