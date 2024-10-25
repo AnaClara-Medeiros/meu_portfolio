@@ -3,7 +3,7 @@ from modulos.get_url_from_png import get_base64_of_png_file
 
 
 def pag_inicio():
-    bin_str = get_base64_of_png_file(r'outros/home.png') #transformar um arqv local em html
+    bin_str = get_base64_of_png_file(r'app/outros/home.png') #transformar um arqv local em html
 
     estilo_pagina = """
     <style>
