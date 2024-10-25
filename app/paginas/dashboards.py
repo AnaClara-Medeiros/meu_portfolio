@@ -3,15 +3,11 @@ from modulos.get_url_from_png import get_base64_of_png_file
 # Dados dos dashboards do Power BI com suas pré-visualizações
 
 def pag_dashboards():
-    #voltar para pagina produtos
-    if st.button("Voltar para Produtos"):
-        st.session_state.pag = 'produtos'
 
-
-    vendas_png = r'app/outros/dash_vendas.png'
-    financeiro_png = r'app/outros/dash_financeiro.png'
-    #financas_png = r'outros/dash_financas.png')
-    logistica_png = r'app/outros/dash_logistica.png'
+    vendas_png = r'outros/dash_vendas.png'
+    financeiro_png = r'outros/dash_financeiro.png'
+    #financas_png = r'outros/dash_financas.png')    
+    logistica_png = r'outros/dash_logistica.png'
 
     dashboards = [
         {
@@ -33,8 +29,17 @@ def pag_dashboards():
     ]
 
     # Título da página
-    st.write("Power BI Dashboards")
-
+    st.write(
+        f"""
+        <div class="container" style="display: flex; align-items: left; width: 100%; background-color: hashtag#FFFFFF;">
+        <div style='background-color: hashtag#ffffff; '>
+        <h1 style='text-align: left; color: #ffffff; font-size: 40px;'>Power BI Dashboards</h1>
+        <h3 style='text-align: left; color: #ffffff; font-size: 18px;'>Tenha uma ferramenta gráfica que reúne informações relevantes do seu negócio, dados de desempenho, métricas de KPI e muito mais para ver os resultados de uma única vez.</h3>
+        </div>
+        </div>
+        """,
+        unsafe_allow_html=True
+        )
     # Exibição dos dashboards
     for dashboard in dashboards:
         st.subheader(dashboard["title"])

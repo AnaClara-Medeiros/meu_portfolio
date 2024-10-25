@@ -1,22 +1,28 @@
 import streamlit as st
+import style_config
 from streamlit_option_menu import option_menu
-st.set_page_config(layout="wide", initial_sidebar_state = 'collapsed', page_title="Ana Medeiros")
 from paginas.pagina_inicio import pag_inicio
+from paginas.dashboards import pag_dashboards
+from paginas.automacoes import pag_automacoes
+from paginas.github import pag_github
 from paginas.pagina_produtos import main_pag_produtos
-from modulos.style_config import estilo
 
-st.markdown(estilo, unsafe_allow_html=True) 
 
-with st.sidebar:
-    selected = option_menu(None, ["Home", 'Produtos'], 
-            icons=['house', 'robot'], menu_icon="cast", default_index=0)
+st.set_page_config(layout="wide", initial_sidebar_state = 'collapsed', page_title="Ana Medeiros")
+
+estilo_html_css = style_config.estilo
+st.markdown(estilo_html_css, unsafe_allow_html=True) 
+
+selected = option_menu(None, ["Home", "DataViz/Dashboards","IA/Automações", "Participações","Certificados"], 
+            icons=['house', 'file-bar-graph','robot', 'file-play','file-check'], menu_icon="cast", default_index=0, orientation='horizontal',
+            styles={"container": {"padding": "0!important", "background-color": "transparent"}})
 
 if selected == 'Home':
     pag_inicio()
             
-if selected == 'Produtos':
-    st.session_state.pag = 'produtos'
-    main_pag_produtos()
+if selected == 'DataViz/Dashboards':
+    st.session_state.pag = 'dashboards'
+    pag_dashboards()
             
 
 
