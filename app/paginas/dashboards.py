@@ -6,7 +6,7 @@ def pag_dashboards():
 
     vendas_png = r'app/outros/dash_vendas.png'
     financeiro_png = r'app/outros/dash_financeiro.png'
-    #financas_png = r'app/app/outros/dash_financas.png')    
+    #financas_png = r'app/app/app/outros/dash_financas.png')    
     logistica_png = r'app/outros/dash_logistica.png'
 
     dashboards = [
