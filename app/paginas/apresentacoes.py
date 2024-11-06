@@ -1,6 +1,8 @@
 import streamlit as st
 from modulos.get_url_from_png import get_base64_of_png_file
 from modulos.open_page_url import open_page
+import streamlit.components.v1 as components
+
 
 
 def pag_apresentacoes():
@@ -26,6 +28,8 @@ def pag_apresentacoes():
 
     col1, col2, col3 = st.columns(3, gap="large")
 
+    with col1:
+        components.iframe("https://www.youtube.com/watch?v=NMK984l4o8E&list=PL2lhbF8mjkwioIrekH0JKyCMqDcsFE3if", width=600, height=500)
     if col1.button('Palestra Business Inteligence - FATEC Assis'):
         open_page('https://www.linkedin.com/feed/update/urn:li:activity:7253035103453364225/')
 
