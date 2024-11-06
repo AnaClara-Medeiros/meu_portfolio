@@ -28,8 +28,6 @@ def pag_apresentacoes():
 
     col1, col2, col3 = st.columns(3, gap="large")
 
-    with col1:
-        components.iframe("https://www.linkedin.com/feed/update/urn:li:activity:7253035103453364225/", width=600, height=500)
     if col1.button('Palestra Business Inteligence - FATEC Assis'):
         open_page('https://www.linkedin.com/feed/update/urn:li:activity:7253035103453364225/')
 
