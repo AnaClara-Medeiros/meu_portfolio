@@ -20,14 +20,15 @@ def pag_github():
 
     #root > div:nth-child(1) > div.withScreencast > div > div > div > section.st-emotion-cache-vk3wp9.eczjsme11 > div.st-emotion-cache-6qob1r.eczjsme3 {
       background-color: #000000;
-
+    
     </style>"""% bin_str
 
 
     st.markdown(estilo_pagina, unsafe_allow_html=True)
 
-    col1, col2, col3, col4 = st.columns(4, gap="medium")
+    col1, col2, col3, col4, col5 = st.columns([1, 0.05, 1, 0.05, 1])
     # Título da página
+    
     col1.write(
         f"""
         <div class="container" style="display: flex; align-items: left; width: 100%; background-color: hashtag#FFFFFF;">
@@ -42,8 +43,11 @@ def pag_github():
     
     if col1.button('Ver Bots'):
         open_page('https://github.com/AnaClara-Medeiros/Scraping')
-
-    col2.write(
+    
+    with col2:
+        st.markdown('<div class="separator"></div>', unsafe_allow_html=True)
+    # Título da página
+    col3.write(
         f"""
         <div class="container" style="display: flex; align-items: left; width: 100%; background-color: hashtag#FFFFFF;">
         <div style='background-color: hashtag#ffffff; '>
@@ -55,12 +59,29 @@ def pag_github():
         unsafe_allow_html=True
         )
     
-    if col2.button('Ver Sites e Apps'):
+    if col3.button('Ver Sites e Apps'):
+        open_page('https://github.com/AnaClara-Medeiros/LLM-AI')
+
+    col3.write(
+        f"""
+        <div class="container" style="display: flex; align-items: left; width: 100%; background-color: hashtag#FFFFFF;">
+        <div style='background-color: hashtag#ffffff; '>
+        <h2 style='text-align: left; color: #ffffff; font-size: 30px;'>AI e LLMs</h2>
+        <h5 style='text-align: left; color: #ffffff; font-size: 14px;'>Com modelos avançados de Inteligência Artificial e Large Language Models (LLM), é possível desenvolver soluções como análise de sentimentos, classificação automatizada de produtos em grande escala e assistentes inteligentes baseados em RAG (Retrieval-Augmented Generation). Essas tecnologias permitem maior personalização, eficiência e automação em diversos processos.</h5>
+        </div>
+        </div>
+        """,
+        unsafe_allow_html=True
+        )
+    
+    if col3.button('Ver LLM-AI'):
         open_page('https://github.com/AnaClara-Medeiros/Scraping')
 
-
+    
+    with col4:
+        st.markdown('<div class="separator"></div>', unsafe_allow_html=True)
     # Título da página
-    col3.write(
+    col1.write(
         f"""
         <div class="container" style="display: flex; align-items: left; width: 100%; background-color: hashtag#FFFFFF;">
         <div style='background-color: hashtag#ffffff; '>
@@ -72,11 +93,11 @@ def pag_github():
         unsafe_allow_html=True
         )
     
-    if col3.button('Ver Machine Learning'):
+    if col1.button('Ver Machine Learning'):
         open_page('https://github.com/AnaClara-Medeiros/Machine_learning')
 
     # Título da página
-    col4.write(
+    col5.write(
         f"""
         <div class="container" style="display: flex; align-items: left; width: 100%; background-color: hashtag#FFFFFF;">
         <div style='background-color: hashtag#ffffff; '>
@@ -88,5 +109,5 @@ def pag_github():
         unsafe_allow_html=True
         )
     
-    if col4.button('Ver WebScraping'):
+    if col5.button('Ver WebScraping'):
         open_page('https://github.com/AnaClara-Medeiros/Scraping')
